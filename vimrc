@@ -20,10 +20,13 @@ filetype plugin indent on
 
 " Colors
 syntax enable           " enable syntax processing
+" -- enable true color for vim
 if (has("termguicolors"))
     set termguicolors
 endif
+" -- uncomment next line if using a transparent terminal
 "highlight Normal ctermbg=NONE
+" -- enable true color for tmux
 if &term =~# '^screen'
     let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
     let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
@@ -99,9 +102,6 @@ map <C-L> <C-W>l
 
 " Enable other stuff
 filetype plugin on
-
-" vim-flake8
-let g:flake8_cmd="venv/bin/flake8"
 
 " update every 1/4 of a second
 set updatetime=250
