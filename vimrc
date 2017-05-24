@@ -6,7 +6,7 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
-Plugin 'joshdick/onedark.vim'
+Plugin 'rakr/vim-one'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'vim-syntastic/syntastic'
@@ -20,8 +20,16 @@ filetype plugin indent on
 
 " Colors
 syntax enable           " enable syntax processing
-colorscheme onedark
-highlight Normal ctermbg=NONE
+if (has("termguicolors"))
+    set termguicolors
+endif
+"highlight Normal ctermbg=NONE
+if &term =~# '^screen'
+    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+endif
+colorscheme one
+set background=dark
 
 " Spaces and tabs
 " -- global
@@ -42,6 +50,11 @@ set wildmenu            " visual autocomplete for command menu
 set showmatch           " highlight matching [{()}]
 set scrolloff=3         " lines of text around cursor
 set colorcolumn=80
+if &term =~ '256color'
+    " Disable Background Color Erase (BCE) so that color schemes
+    " work properly when Vim is used inside tmux and GNU screen.
+    set t_ut=
+endif
 
 " Searching
 set incsearch           " search as characters are entered
@@ -58,7 +71,7 @@ nnoremap <Leader>tt :NERDTreeToggle<CR>
 " vim-airline configuration
 set laststatus=2        " always show status line
 let g:airline_powerline_fonts = 1 " use powerline fonts
-let g:airline_theme='onedark'     " set theme to one dark
+let g:airline_theme='one'     " set theme to one dark
 
 " syntastic configuration
 set statusline+=%#warningmsg#
@@ -92,4 +105,3 @@ let g:flake8_cmd="venv/bin/flake8"
 
 " update every 1/4 of a second
 set updatetime=250
-
