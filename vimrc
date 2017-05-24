@@ -41,6 +41,7 @@ filetype indent on      " load filetype-specific indent files
 set wildmenu            " visual autocomplete for command menu
 set showmatch           " highlight matching [{()}]
 set scrolloff=3         " lines of text around cursor
+set colorcolumn=80
 
 " Searching
 set incsearch           " search as characters are entered
@@ -76,6 +77,12 @@ let g:ycm_add_preview_to_completeopt = 0
 " Scroll the viewport faster
 nnoremap <C-e> 3<C-e>
 nnoremap <C-y> 3<C-y>
+
+" window movement
+map <C-H> <C-W>h
+map <C-J> <C-W>j
+map <C-K> <C-W>k
+map <C-L> <C-W>l
 
 " Enable other stuff
 filetype plugin on
