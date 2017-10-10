@@ -9,8 +9,6 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'rakr/vim-one'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'vim-syntastic/syntastic'
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'vim-airline/vim-airline'
@@ -20,10 +18,6 @@ filetype plugin indent on
 
 " Colors
 syntax enable           " enable syntax processing
-" -- enable true color for vim
-if (has("termguicolors"))
-    set termguicolors
-endif
 " -- uncomment next line if using a transparent terminal
 "highlight Normal ctermbg=NONE
 " -- enable true color for tmux
@@ -32,7 +26,7 @@ if &term =~# '^screen'
     let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 endif
 colorscheme one
-set background=dark
+set background=light
 
 " Spaces and tabs
 " -- global
@@ -80,15 +74,6 @@ let g:airline_theme='one'     " set theme to one dark
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-let g:syntastic_python_flake8_post_args= '--ignore=F403,F405,F822'
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
-" YouCompleteMe configuration
-set completeopt-=preview
-let g:ycm_add_preview_to_completeopt = 0
 
 " Scroll the viewport faster
 nnoremap <C-e> 3<C-e>
