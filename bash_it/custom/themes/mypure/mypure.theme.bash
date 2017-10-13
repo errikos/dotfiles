@@ -23,12 +23,12 @@ scm_prompt() {
 }
 
 pure_prompt() {
-    ps_host="${bold_red}\h${normal}";
+    ps_host="${bold_black}\h${normal}";
     ps_user="${bold_green}\u${normal}";
     ps_user_mark="${purple}❯_ ${normal}";
     ps_root="${red}\u${red}";
     ps_root_mark="${red} # ${normal}"
-    ps_path="${bold_black}\w${normal}";
+    ps_path="${black}\w${normal}";
 
     # make it work
     case $(id -u) in
