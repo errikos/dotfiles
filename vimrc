@@ -12,12 +12,17 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 call vundle#end()
 filetype plugin indent on
 
 " Colors
 syntax enable           " enable syntax processing
+" -- enable true color for vim
+if (has("termguicolors"))
+    set termguicolors
+endif
 " -- uncomment next line if using a transparent terminal
 "highlight Normal ctermbg=NONE
 " -- enable true color for tmux
