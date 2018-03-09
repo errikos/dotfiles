@@ -5,7 +5,13 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
+
 Plugin 'scrooloose/nerdtree'
+" enable line numbers
+let NERDTreeShowLineNumbers=1
+" make sure relative line numbers are used
+autocmd FileType nerdtree setlocal relativenumber
+
 Plugin 'rakr/vim-one'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'scrooloose/nerdcommenter'
@@ -51,11 +57,13 @@ au BufNewFile,BufRead *.java set
     \ textwidth=100
     \ autoindent
     \ fileformat=unix
+    \ colorcolumn=100
 " -- scala
 au BufNewFile,BufRead *.scala set
     \ textwidth=100
     \ autoindent
     \ fileformat=unix
+    \ colorcolumn=100
 
 " UI config
 set relativenumber      " show line numbers, relative to line
