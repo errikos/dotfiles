@@ -14,6 +14,8 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
+Plugin 'derekwyatt/vim-scala'
+
 call vundle#end()
 filetype plugin indent on
 
@@ -42,6 +44,16 @@ set expandtab           " tabs are spaces
 au BufNewFile,BufRead *.py set
     \ shiftwidth=4
     \ textwidth=79
+    \ autoindent
+    \ fileformat=unix
+" -- java
+au BufNewFile,BufRead *.java set
+    \ textwidth=100
+    \ autoindent
+    \ fileformat=unix
+" -- scala
+au BufNewFile,BufRead *.scala set
+    \ textwidth=100
     \ autoindent
     \ fileformat=unix
 
