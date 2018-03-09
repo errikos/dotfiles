@@ -11,6 +11,8 @@ Plugin 'scrooloose/nerdtree'
 let NERDTreeShowLineNumbers=1
 " make sure relative line numbers are used
 autocmd FileType nerdtree setlocal relativenumber
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
 
 Plugin 'rakr/vim-one'
 Plugin 'sheerun/vim-polyglot'
@@ -21,6 +23,17 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
 Plugin 'derekwyatt/vim-scala'
+
+" syntastic: Syntax checking hacks for vim
+Plugin 'vim-syntastic/syntastic'
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 call vundle#end()
 filetype plugin indent on
