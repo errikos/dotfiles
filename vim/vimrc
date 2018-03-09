@@ -7,6 +7,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'scrooloose/nerdtree'
+nnoremap <Leader>tt :NERDTreeToggle<CR>
 " enable line numbers
 let NERDTreeShowLineNumbers=1
 " make sure relative line numbers are used
@@ -99,9 +100,6 @@ set hlsearch            " highlight matches
 set foldenable          " enable folding
 set foldmethod=indent   " fold based on indent level
 set foldlevel=99        " open most folds by default
-
-" NERDTree configuration
-nnoremap <Leader>tt :NERDTreeToggle<CR>
 
 " vim-airline configuration
 set laststatus=2        " always show status line
