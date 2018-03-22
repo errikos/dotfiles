@@ -23,6 +23,12 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
+Plugin 'Valloric/YouCompleteMe'
+let g:ycm_autoclose_preview_window_after_insertion = 1
+nnoremap <F9> :YcmCompleter FixIt<CR>
+
+Bundle 'wellle/targets.vim'
+
 Plugin 'derekwyatt/vim-scala'
 
 " syntastic: Syntax checking hacks for vim
@@ -30,6 +36,8 @@ Plugin 'vim-syntastic/syntastic'
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+let g:syntastic_mode_map = { "mode": "active",
+                           \ "passive_filetypes": ["scala"] }
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
@@ -59,6 +67,7 @@ set background=light
 " -- global
 set tabstop=4           " number of visual spaces per TAB
 set softtabstop=4       " number of spaces in tab when editing
+set shiftwidth=4
 set expandtab           " tabs are spaces
 " -- python
 au BufNewFile,BufRead *.py set
@@ -80,11 +89,11 @@ au BufNewFile,BufRead *.scala set
     \ colorcolumn=100
 
 " UI config
-set relativenumber      " show line numbers, relative to line
-filetype indent on      " load filetype-specific indent files
-set wildmenu            " visual autocomplete for command menu
-set showmatch           " highlight matching [{()}]
-set scrolloff=3         " lines of text around cursor
+set number relativenumber " show line numbers, relative to line
+filetype indent on        " load filetype-specific indent files
+set wildmenu              " visual autocomplete for command menu
+set showmatch             " highlight matching [{()}]
+set scrolloff=5           " lines of text around cursor
 set colorcolumn=80
 if &term =~ '256color'
     " Disable Background Color Erase (BCE) so that color schemes
@@ -106,23 +115,19 @@ set laststatus=2        " always show status line
 let g:airline_powerline_fonts = 1 " use powerline fonts
 let g:airline_theme='one'     " set theme to one dark
 
-" syntastic configuration
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
 " Scroll the viewport faster
-nnoremap <C-e> 3<C-e>
-nnoremap <C-y> 3<C-y>
+nnoremap <C-e> 5<C-e>
+nnoremap <C-y> 5<C-y>
 
 " window movement
-map <C-H> <C-W>h
-map <C-J> <C-W>j
-map <C-K> <C-W>k
-map <C-L> <C-W>l
+nnoremap <C-H> <C-W>h
+nnoremap <C-J> <C-W>j
+nnoremap <C-K> <C-W>k
+nnoremap <C-L> <C-W>l
 
 " Enable other stuff
 filetype plugin on
 
 " update every 1/4 of a second
 set updatetime=250
+
