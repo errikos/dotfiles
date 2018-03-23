@@ -1,11 +1,27 @@
-" Vundle
-set nocompatible
-filetype off
+set nocompatible              " be iMproved, required by Vundle
+filetype off                  " required by Vundle
+
+" set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+" let Vundle manage Vundle, required by Vundle
 Plugin 'VundleVim/Vundle.vim'
 
+" atom colours
+Plugin 'rakr/vim-one'
+
+" a solid language pack
+Plugin 'sheerun/vim-polyglot'
+
+" airline statusline
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+set laststatus=2                  " always show status line
+let g:airline_powerline_fonts = 1 " use powerline fonts
+let g:airline_theme='one'         " set theme to one light
+
+" NERDTree
 Plugin 'scrooloose/nerdtree'
 nnoremap <Leader>tt :NERDTreeToggle<CR>
 " enable line numbers
@@ -15,23 +31,19 @@ autocmd FileType nerdtree setlocal relativenumber
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 
-Plugin 'rakr/vim-one'
-Plugin 'sheerun/vim-polyglot'
+" NERDCommenter
 Plugin 'scrooloose/nerdcommenter'
+
+" git integration
 Plugin 'airblade/vim-gitgutter'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
 
+" code completion
 Plugin 'Valloric/YouCompleteMe'
 let g:ycm_autoclose_preview_window_after_insertion = 1
 nnoremap <F9> :YcmCompleter FixIt<CR>
 
-Bundle 'wellle/targets.vim'
-
-Plugin 'derekwyatt/vim-scala'
-
-" syntastic: Syntax checking hacks for vim
+" syntax checking hacks for vim
 Plugin 'vim-syntastic/syntastic'
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -44,26 +56,14 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-call vundle#end()
-filetype plugin indent on
+" All of plugins must be added before the following line
+call vundle#end()            " required by Vundle
+filetype plugin indent on    " required by Vundle
 
-" Colors
-syntax enable           " enable syntax processing
-" -- enable true color for vim
-if (has("termguicolors"))
-    set termguicolors
-endif
-" -- uncomment next line if using a transparent terminal
-"highlight Normal ctermbg=NONE
-" -- enable true color for tmux
-if &term =~# '^screen'
-    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-endif
-colorscheme one
-set background=light
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Custom settings
 
-" Spaces and tabs
+" spaces and tabs
 " -- global
 set tabstop=4           " number of visual spaces per TAB
 set softtabstop=4       " number of spaces in tab when editing
@@ -88,6 +88,22 @@ au BufNewFile,BufRead *.scala set
     \ fileformat=unix
     \ colorcolumn=100
 
+" Colors
+syntax enable
+" -- enable true color for vim
+if (has("termguicolors"))
+    set termguicolors
+endif
+" -- uncomment next line if using a transparent terminal
+"highlight Normal ctermbg=NONE
+" -- enable true color for tmux
+if &term =~# '^screen'
+    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+endif
+colorscheme one
+set background=light
+
 " UI config
 set number relativenumber " show line numbers, relative to line
 filetype indent on        " load filetype-specific indent files
@@ -110,11 +126,6 @@ set foldenable          " enable folding
 set foldmethod=indent   " fold based on indent level
 set foldlevel=99        " open most folds by default
 
-" vim-airline configuration
-set laststatus=2        " always show status line
-let g:airline_powerline_fonts = 1 " use powerline fonts
-let g:airline_theme='one'     " set theme to one dark
-
 " Scroll the viewport faster
 nnoremap <C-e> 5<C-e>
 nnoremap <C-y> 5<C-y>
@@ -127,7 +138,3 @@ nnoremap <C-L> <C-W>l
 
 " Enable other stuff
 filetype plugin on
-
-" update every 1/4 of a second
-set updatetime=250
-
