@@ -20,10 +20,10 @@ Plugin 'vim-airline/vim-airline-themes'
 set laststatus=2                  " always show status line
 let g:airline_powerline_fonts = 1 " use powerline fonts
 let g:airline_theme='one'         " set theme to one light
-let g:airline_right_alt_sep = ''
-let g:airline_right_sep = ''
-let g:airline_left_alt_sep= ''
-let g:airline_left_sep = ''
+let g:airline_right_alt_sep=''
+let g:airline_right_sep=''
+let g:airline_left_alt_sep=''
+let g:airline_left_sep=''
 
 " NERDTree
 Plugin 'scrooloose/nerdtree'
@@ -52,13 +52,14 @@ Plugin 'vim-syntastic/syntastic'
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-let g:syntastic_mode_map = { "mode": "active",
-                           \ "passive_filetypes": ["scala"] }
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+" clang-format integration
+Plugin 'rhysd/vim-clang-format'
 
 " LaTeX
 Plugin 'lervag/vimtex'
@@ -146,5 +147,15 @@ nnoremap <C-J> <C-W>j
 nnoremap <C-K> <C-W>k
 nnoremap <C-L> <C-W>l
 
+" quoting
+nnoremap <Leader>q" ciw""<Esc>P
+nnoremap <Leader>q' ciw''<Esc>P
+nnoremap <Leader>q( ciw()<Esc>P
+nnoremap <Leader>q) ciw()<Esc>P
+
+
 " Enable other stuff
 filetype plugin on
+
+" update every 1 second
+set updatetime=250
