@@ -1,5 +1,8 @@
-set guifont=Hack:h11
-set lines=60 columns=120
+set guifont=Fura\ Code\ Retina\ Nerd\ Font\ Complete\ Mono:h11
+set lines=65 columns=120
+set macligatures
+set guioptions-=L
+set guioptions-=r
 
 " open NERDTree when gvim opens
 au VimEnter * NERDTree
