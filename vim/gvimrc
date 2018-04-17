@@ -1,6 +1,5 @@
-set guifont=Fura\ Code\ Retina\ Nerd\ Font\ Mono:h11
-set lines=65 columns=120
-set macligatures
+set guifont=Hack\ Regular\ Nerd\ Font\ Complete\ Mono:h11
+set lines=65 columns=117
 set guioptions-=L
 set guioptions-=r
 
