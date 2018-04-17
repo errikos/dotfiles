@@ -1,4 +1,4 @@
-set guifont=Fura\ Code\ Retina\ Nerd\ Font\ Complete\ Mono:h11
+set guifont=Fura\ Code\ Retina\ Nerd\ Font\ Mono:h11
 set lines=65 columns=120
 set macligatures
 set guioptions-=L
@@ -12,7 +12,3 @@ au BufWinEnter * NERDTreeMirror
 au VimEnter * if argc() | wincmd p | endif
 " close the NERDTree buffer if it is the last one standing
 au BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
-" extend window size when editing a java or scala file
-au BufNewFile,BufRead *.{java,scala} set
-    \ columns=142
