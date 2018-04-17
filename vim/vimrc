@@ -20,6 +20,8 @@ Plugin 'vim-airline/vim-airline-themes'
 set laststatus=2                  " always show status line
 let g:airline_powerline_fonts = 1 " use powerline fonts
 let g:airline_theme='one'         " set theme to one light
+let g:airline_right_sep = ''
+let g:airline_left_sep = ''
 
 " NERDTree
 Plugin 'scrooloose/nerdtree'
