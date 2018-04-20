@@ -1,5 +1,6 @@
 # scm theming
-SCM_THEME_PROMPT_PREFIX="|"
+SCM_THEME_PROMPT_PREFIX=" "
+#SCM_THEME_PROMPT_PREFIX="|"
 SCM_THEME_PROMPT_SUFFIX=""
 
 SCM_THEME_PROMPT_DIRTY=" ${bold_red}✗${normal}"
@@ -18,7 +19,8 @@ scm_prompt() {
         then 
             return
         else 
-            echo "[$(scm_char)$(scm_prompt_info)]"
+            printf "${bold_black}\uE0A0${normal}$(scm_prompt_info)"
+            #echo "[$(scm_char)$(scm_prompt_info)]"
     fi 
 }
 
