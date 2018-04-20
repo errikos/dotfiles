@@ -8,6 +8,14 @@ call vundle#begin()
 " let Vundle manage Vundle, required by Vundle
 Plugin 'VundleVim/Vundle.vim'
 
+" indentation lines
+Plugin 'Yggdroot/indentLine'
+let g:indentLine_setColors = 0
+let g:indentLine_char = '⎸'
+
+" python virtualenv support
+Plugin 'plytophogy/vim-virtualenv'
+
 " atom colours
 Plugin 'rakr/vim-one'
 
@@ -30,7 +38,6 @@ let NERDTreeShowLineNumbers=1
 autocmd FileType nerdtree setlocal relativenumber
 let g:NERDTreeMinimalUI=1
 let g:NERDTreeDirArrows=1
-let g:NERDTreeWinSize=26
 
 " NERDCommenter
 Plugin 'scrooloose/nerdcommenter'
