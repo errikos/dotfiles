@@ -1,0 +1,74 @@
+{
+    "telemetry.enableTelemetry": false,
+    "workbench.colorTheme": "Default Light+",
+    "editor.fontFamily": "'Fira Code'",
+    "editor.fontSize": 12,
+    "editor.fontLigatures": true,
+    "editor.lineNumbers": "relative",
+    "editor.minimap.enabled": false,
+    "terminal.integrated.fontSize": 11,
+    "workbench.startupEditor": "newUntitledFile",
+    // vim mode keybindings
+    "vim.otherModesKeyBindingsNonRecursive": [
+        {
+            "before": ["<C-e>"],
+            "after": ["5", "<C-e>"]
+        },
+        {
+            "before": ["<C-y>"],
+            "after": ["5", "<C-y>"]
+        }
+    ],
+    // ruler settings
+    "editor.rulers": [80],
+    "[scala]": {
+        "editor.rulers": [100]
+    },
+    "[java]": {
+        "editor.rulers": [100]
+    },
+
+    "latex-workshop.latex.outputDir": "./out/",
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "latexmk",
+            "tools": [
+                "latexmk"
+            ]
+        },
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "-aux-directory=out",
+                "-output-directory=out",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-aux-directory=out",
+                "-output-directory=out",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": [
+                "%DOCFILE%"
+            ]
+        }
+    ]
+}
