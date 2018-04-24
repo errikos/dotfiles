@@ -1,10 +1,11 @@
 {
     "telemetry.enableTelemetry": false,
     "workbench.colorTheme": "Default Light+",
-    "editor.fontFamily": "'Fira Code'",
-    "editor.fontSize": 12,
-    "editor.fontLigatures": true,
+    "editor.fontFamily": "Hack, 'Fira Code'",
+    "editor.fontSize": 11,
     "editor.lineNumbers": "relative",
+    "editor.rulers": [80],
+    "editor.wordWrap": "wordWrapColumn",
     "editor.minimap.enabled": false,
     "terminal.integrated.fontSize": 11,
     "workbench.startupEditor": "newUntitledFile",
@@ -19,8 +20,7 @@
             "after": ["5", "<C-y>"]
         }
     ],
-    // ruler settings
-    "editor.rulers": [80],
+    // per language settings
     "[scala]": {
         "editor.rulers": [100]
     },
@@ -70,5 +70,11 @@
                 "%DOCFILE%"
             ]
         }
-    ]
+    ],
+
+    // Java
+    "java.errors.incompleteClasspath.severity": "ignore",
+    // Scala Language Server
+    "scalaLanguageServer.logLevel" : "ERROR",
+    "scalaLanguageServer.heapSize" : "4G",
 }
