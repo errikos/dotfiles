@@ -18,9 +18,13 @@ call vundle#begin()
 " let Vundle manage Vundle, required by Vundle
 Plugin 'VundleVim/Vundle.vim'
 
+" Markdown preview
+Plugin 'JamshedVesuna/vim-markdown-preview'
+let vim_markdown_preview_github=1  " GitHub flavour
+
 " python virtualenv support
 Plugin 'plytophogy/vim-virtualenv'
-" disable polyglot LaTeX, as it conflicts with vim-latex
+" disable polyglot LaTeX, as it conflicts with vimtex
 let g:polyglot_disabled = ['latex']
 
 " atom colours
@@ -45,6 +49,7 @@ let NERDTreeShowLineNumbers=1
 autocmd FileType nerdtree setlocal relativenumber
 let g:NERDTreeMinimalUI=1
 let g:NERDTreeDirArrows=1
+" let g:NERDTreeWinSize=25
 
 " comment/uncomment stuff
 Plugin 'tpope/vim-commentary'
@@ -60,6 +65,7 @@ nnoremap <F9> :YcmCompleter FixIt<CR>
 
 " scala support
 Plugin 'derekwyatt/vim-scala'
+let g:scala_scaladoc_indent = 1  " use ScalaDoc recommended identation
 Plugin 'ensime/ensime-vim'
 au BufWritePost *.scala silent :EnTypeCheck
 nnoremap <localleader>t :EnType<CR>
@@ -88,6 +94,26 @@ Plugin 'lervag/vimtex'
 
 " Dev-art
 Plugin 'ryanoasis/vim-devicons'
+
+" Snippets
+Plugin 'SirVer/ultisnips'  " track the engine
+Plugin 'honza/vim-snippets'  " get the snippets
+
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger = "<nop>"
+let g:ulti_expand_or_jump_res = 0
+function ExpandSnippetOrCarriageReturn()
+    let snippet = UltiSnips#ExpandSnippetOrJump()
+    if g:ulti_expand_or_jump_res > 0
+        return snippet
+    else
+        return "\<CR>"
+    endif
+endfunction
+inoremap <expr> <CR> pumvisible() ? "<C-R>=ExpandSnippetOrCarriageReturn()<CR>" : "\<CR>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
 
 " All of plugins must be added before the following line
 call vundle#end()            " required by Vundle
@@ -184,5 +210,6 @@ let g:ycm_semantic_triggers.tex = g:vimtex#re#youcompleteme
 " Enable other stuff
 filetype plugin on
 
-" update every 1 second
-set updatetime=250
+set updatetime=1000        " write to swap file if 1 sec idle
+set guicursor+=a:blinkon0  " disable cursor blinking (mainly for GUI mode)
+set clipboard=unnamed      " enable system clipboard
