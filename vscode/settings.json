@@ -1,5 +1,6 @@
 {
     "telemetry.enableTelemetry": false,
+    "telemetry.enableCrashReporter": false,
     "workbench.colorTheme": "Default Light+",
     "editor.fontFamily": "Hack, 'Fira Code'",
     "editor.fontSize": 11,
@@ -7,6 +8,7 @@
     "editor.rulers": [80],
     "editor.wordWrap": "wordWrapColumn",
     "editor.minimap.enabled": false,
+    "editor.cursorBlinking": "solid",
     "terminal.integrated.fontSize": 11,
     "workbench.startupEditor": "newUntitledFile",
     // vim mode keybindings
@@ -18,14 +20,32 @@
         {
             "before": ["<C-y>"],
             "after": ["5", "<C-y>"]
+        },
+        {
+            "before": ["<Leader>", "q", "\""],
+            "after": ["c", "i", "w", "\"", "\"", "<Esc>", "P"]
+        },
+        {
+            "before": ["<Leader>", "q", "'"],
+            "after": ["c", "i", "w", "'", "'", "<Esc>", "P"]
+        },
+        {
+            "before": ["<Leader>", "q", "("],
+            "after": ["c", "i", "w", "(", ")", "<Esc>", "P"]
+        },
+        {
+            "before": ["<Leader>", "q", ")"],
+            "after": ["c", "i", "w", "(", ")", "<Esc>", "P"]
         }
     ],
     // per language settings
     "[scala]": {
-        "editor.rulers": [100]
+        "editor.rulers": [100],
+        "editor.wordWrapColumn": 100
     },
     "[java]": {
-        "editor.rulers": [100]
+        "editor.rulers": [100],
+        "editor.wordWrapColumn": 100
     },
 
     "latex-workshop.latex.outputDir": "./out/",
@@ -76,5 +96,9 @@
     "java.errors.incompleteClasspath.severity": "ignore",
     // Scala Language Server
     "scalaLanguageServer.logLevel" : "ERROR",
-    "scalaLanguageServer.heapSize" : "4G",
+    "scalaLanguageServer.heapSize": "4G",
+    "workbench.iconTheme": "eq-material-theme-icons",
+
+    // CSV preview plugin
+    "csv-preview.theme": "cleanlight"
 }
