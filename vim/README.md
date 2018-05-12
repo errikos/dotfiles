@@ -15,7 +15,7 @@ show true colour (e.g. iTerm2 on OSX, GNOME terminal, Konsole, etc).
 3. Copy `vimrc` to `~/.vimrc`.
 4. If you have a GUI-based editor, copy `gvimrc` to `~/.gvimrc`.
    Do not forget to change the font to your favourite one.
-   In order for Devicons to work, a nerd patched font is required.
+   In order for Devicons to work, a [nerd patched font](https://github.com/ryanoasis/nerd-fonts) is required.
 5. Run `vim +PluginInstall +qall` to trigger Vundle plugin installation.
 6. Write code like a boss!
 
