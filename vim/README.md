@@ -11,8 +11,12 @@ show true colour (e.g. iTerm2 on OSX, GNOME terminal, Konsole, etc).
 ## Instructions
 
 1. Install [Vundle](https://github.com/VundleVim/Vundle.vim).
-2. Copy `vimrc` to `~/.vimrc`.
-3. If you have a GUI-based editor, copy `gvimrc` to `~/.gvimrc`.
-4. Write code like a boss!
+2. Copy `vimconf` to `~/.vimconf`.
+3. Copy `vimrc` to `~/.vimrc`.
+4. If you have a GUI-based editor, copy `gvimrc` to `~/.gvimrc`.
+   Do not forget to change the font to your favourite one.
+   In order for Devicons to work, a nerd patched font is required.
+5. Run `vim +PluginInstall +qall` to trigger Vundle plugin installation.
+6. Write code like a boss!
 
 Have fun!

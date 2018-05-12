@@ -1,6 +1,7 @@
-set nocompatible              " be iMproved, required by Vundle
-filetype off                  " required by Vundle
+set nocompatible              " be iMproved, required
+filetype off                  " required
 
+" workaround for weird python3 bug
 if has('python3')
     command! -nargs=1 Py py3 <args>
     set pythonthreedll=/usr/local/Frameworks/Python.framework/Versions/3.6/Python
@@ -15,201 +16,51 @@ endif
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-" let Vundle manage Vundle, required by Vundle
+" let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-" Markdown preview
-Plugin 'JamshedVesuna/vim-markdown-preview'
-let vim_markdown_preview_github=1  " GitHub flavour
-
-" python virtualenv support
-Plugin 'plytophogy/vim-virtualenv'
-" disable polyglot LaTeX, as it conflicts with vimtex
-let g:polyglot_disabled = ['latex']
-
-" atom colours
+" Atom colours
 Plugin 'rakr/vim-one'
-
-" a solid language pack
-Plugin 'sheerun/vim-polyglot'
 
 " airline statusline
 Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-set laststatus=2                  " always show status line
-let g:airline_powerline_fonts = 1 " use powerline fonts
-let g:airline_theme='one'         " set theme to one light
+
+" Dev art
+Plugin 'ryanoasis/vim-devicons'
 
 " NERDTree
 Plugin 'scrooloose/nerdtree'
-nnoremap <Leader>tt :NERDTreeToggle<CR>
-" enable line numbers
-let NERDTreeShowLineNumbers=1
-" make sure relative line numbers are used
-autocmd FileType nerdtree setlocal relativenumber
-let g:NERDTreeMinimalUI=1
-let g:NERDTreeDirArrows=1
-" let g:NERDTreeWinSize=25
-
-" comment/uncomment stuff
-Plugin 'tpope/vim-commentary'
 
 " git integration
 Plugin 'airblade/vim-gitgutter'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 
+" comment/uncomment stuff
+Plugin 'tpope/vim-commentary'
+
+" a solid language pack
+Plugin 'sheerun/vim-polyglot'
+
+" syntax checking
+Plugin 'vim-syntastic/syntastic'
+
+" ensime for Scala
+Plugin 'ensime/ensime-vim'
+
 " code completion
 Plugin 'Valloric/YouCompleteMe'
-let g:ycm_autoclose_preview_window_after_insertion = 1
-nnoremap <F9> :YcmCompleter FixIt<CR>
-
-" scala support
-Plugin 'derekwyatt/vim-scala'
-let g:scala_scaladoc_indent = 1  " use ScalaDoc recommended identation
-Plugin 'ensime/ensime-vim'
-au BufWritePost *.scala silent :EnTypeCheck
-nnoremap <localleader>t :EnType<CR>
-
-" syntax checking hacks for vim
-Plugin 'vim-syntastic/syntastic'
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_scala_checkers=['ensime']
-
-let g:syntastic_mode_map = {
-    \ "mode": "active",
-    \ "passive_filetypes": ["tex"] }
-
-" clang-format integration
-Plugin 'rhysd/vim-clang-format'
-
-" LaTeX
-Plugin 'lervag/vimtex'
-
-" Dev-art
-Plugin 'ryanoasis/vim-devicons'
 
 " Snippets
-Plugin 'SirVer/ultisnips'  " track the engine
+Plugin 'SirVer/ultisnips'    " track the engine
 Plugin 'honza/vim-snippets'  " get the snippets
 
-" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger = "<nop>"
-let g:ulti_expand_or_jump_res = 0
-function ExpandSnippetOrCarriageReturn()
-    let snippet = UltiSnips#ExpandSnippetOrJump()
-    if g:ulti_expand_or_jump_res > 0
-        return snippet
-    else
-        return "\<CR>"
-    endif
-endfunction
-inoremap <expr> <CR> pumvisible() ? "<C-R>=ExpandSnippetOrCarriageReturn()<CR>" : "\<CR>"
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
 
-" If you want :UltiSnipsEdit to split your window.
-let g:UltiSnipsEditSplit="vertical"
-
-" All of plugins must be added before the following line
-call vundle#end()            " required by Vundle
-filetype plugin indent on    " required by Vundle
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Custom settings
-
-" spaces and tabs
-" -- global
-set tabstop=4           " number of visual spaces per TAB
-set softtabstop=4       " number of spaces in tab when editing
-set shiftwidth=4
-set expandtab           " tabs are spaces
-" -- python
-au BufNewFile,BufRead *.py set
-    \ shiftwidth=4
-    \ textwidth=79
-    \ autoindent
-    \ fileformat=unix
-" -- java
-au BufNewFile,BufRead *.java set
-    \ textwidth=100
-    \ autoindent
-    \ fileformat=unix
-    \ colorcolumn=100
-" -- scala
-au BufNewFile,BufRead *.scala set
-    \ textwidth=100
-    \ autoindent
-    \ fileformat=unix
-    \ colorcolumn=100
-
-" Colors
-syntax enable
-" -- enable true color for vim
-if (has("termguicolors"))
-    set termguicolors
-endif
-" -- uncomment next line if using a transparent terminal
-"highlight Normal ctermbg=NONE
-" -- enable true color for tmux
-if &term =~# '^screen'
-    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-endif
-colorscheme one
-set background=light
-
-" UI config
-set number relativenumber " show line numbers, relative to line
-filetype indent on        " load filetype-specific indent files
-set wildmenu              " visual autocomplete for command menu
-set showmatch             " highlight matching [{()}]
-set scrolloff=5           " lines of text around cursor
-set colorcolumn=80
-if &term =~ '256color'
-    " Disable Background Color Erase (BCE) so that color schemes
-    " work properly when Vim is used inside tmux and GNU screen.
-    set t_ut=
-endif
-
-" Searching
-set incsearch           " search as characters are entered
-set hlsearch            " highlight matches
-
-" Folding
-set foldenable          " enable folding
-set foldmethod=indent   " fold based on indent level
-set foldlevel=99        " open most folds by default
-
-" Scroll the viewport faster
-nnoremap <C-e> 5<C-e>
-nnoremap <C-y> 5<C-y>
-
-" window movement
-nnoremap <C-H> <C-W>h
-nnoremap <C-J> <C-W>j
-nnoremap <C-K> <C-W>k
-nnoremap <C-L> <C-W>l
-
-" quoting
-nnoremap <Leader>q" ciw""<Esc>P
-nnoremap <Leader>q' ciw''<Esc>P
-nnoremap <Leader>q( ciw()<Esc>P
-nnoremap <Leader>q) ciw()<Esc>P
-
-" integrate vimtex with YouCompleteMe
-if !exists('g:ycm_semantic_triggers')
-  let g:ycm_semantic_triggers = {}
-endif
-let g:ycm_semantic_triggers.tex = g:vimtex#re#youcompleteme
-
-" Enable other stuff
-filetype plugin on
-
-set updatetime=1000        " write to swap file if 1 sec idle
-set guicursor+=a:blinkon0  " disable cursor blinking (mainly for GUI mode)
-set clipboard=unnamed      " enable system clipboard
+set runtimepath+=~/.vimconf
+so ~/.vimconf/colours.vim
+so ~/.vimconf/ui.vim
+so ~/.vimconf/bindings.vim
+so ~/.vimconf/editor.vim
+so ~/.vimconf/plugins.vim

@@ -1,7 +1,9 @@
-set guifont=Hack\ Nerd\ Font\ Mono:h11
-set lines=77 columns=158
-set guioptions-=L
-set guioptions-=r
+set guifont=Hack\ Nerd\ Font\ Mono:h11  " font for GUI
+set lines=65 columns=140  " window size
+set guioptions-=L  " disable left scrollbar
+set guioptions-=r  " disable right scrollbar
+
+set colorcolumn=100
 
 " open NERDTree when gvim opens
 au VimEnter * NERDTree
