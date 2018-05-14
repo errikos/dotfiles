@@ -19,8 +19,8 @@ scm_prompt() {
         then 
             return
         else 
-            printf "${bold_black}\uE0A0${normal}$(scm_prompt_info)"
-            #echo "[$(scm_char)$(scm_prompt_info)]"
+            # printf "${bold_black}\uE0A0${normal}$(scm_prompt_info)"
+            echo "[$(scm_char)$(scm_prompt_info)]"
     fi 
 }
 
