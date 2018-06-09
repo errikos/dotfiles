@@ -1,17 +1,6 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-" workaround for weird python3 bug
-if has('python3')
-    command! -nargs=1 Py py3 <args>
-    set pythonthreedll=/usr/local/Frameworks/Python.framework/Versions/3.6/Python
-    set pythonthreehome=/usr/local/Frameworks/Python.framework/Versions/3.6
-else
-    command! -nargs=1 Py py <args>
-    set pythondll=/usr/local/Frameworks/Python.framework/Versions/2.7/Python
-    set pythonhome=/usr/local/Frameworks/Python.framework/Versions/2.7
-endif
-
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -25,9 +14,6 @@ Plugin 'rakr/vim-one'
 " airline statusline
 Plugin 'vim-airline/vim-airline'
 
-" Dev art
-Plugin 'ryanoasis/vim-devicons'
-
 " NERDTree
 Plugin 'scrooloose/nerdtree'
 
@@ -38,17 +24,20 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'
 " comment/uncomment stuff
 Plugin 'tpope/vim-commentary'
 
-" a solid language pack
-Plugin 'sheerun/vim-polyglot'
-
 " syntax checking
 Plugin 'vim-syntastic/syntastic'
+
+" a solid language pack
+Plugin 'sheerun/vim-polyglot'
 
 " ensime for Scala
 Plugin 'ensime/ensime-vim'
 
 " code completion
 Plugin 'Valloric/YouCompleteMe'
+
+" markdown preview
+Plugin 'JamshedVesuna/vim-markdown-preview'
 
 " Snippets
 Plugin 'SirVer/ultisnips'    " track the engine
