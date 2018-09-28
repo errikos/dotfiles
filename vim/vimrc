@@ -47,9 +47,9 @@ Plugin 'honza/vim-snippets'  " get the snippets
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-set runtimepath+=~/.vimconf
-so ~/.vimconf/colours.vim
-so ~/.vimconf/ui.vim
-so ~/.vimconf/bindings.vim
-so ~/.vimconf/editor.vim
-so ~/.vimconf/plugins.vim
+set runtimepath+=~/.vim_config
+so ~/.vim_config/colours.vim
+so ~/.vim_config/ui.vim
+so ~/.vim_config/bindings.vim
+so ~/.vim_config/editor.vim
+so ~/.vim_config/plugins.vim
