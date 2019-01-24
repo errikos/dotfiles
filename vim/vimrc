@@ -10,9 +10,11 @@ Plugin 'VundleVim/Vundle.vim'
 
 " Atom colours
 Plugin 'rakr/vim-one'
+Plugin 'altercation/vim-colors-solarized'
 
 " airline statusline
 Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 " NERDTree
 Plugin 'scrooloose/nerdtree'
