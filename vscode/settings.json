@@ -1,54 +1,58 @@
 {
     "telemetry.enableTelemetry": false,
     "telemetry.enableCrashReporter": false,
-    "workbench.colorTheme": "Default Light+",
-    "editor.fontFamily": "Hack, 'Fira Code'",
-    "editor.fontSize": 11,
+    "editor.fontFamily": "Source Code Pro, Menlo, Fira Code",
     "editor.lineNumbers": "relative",
-    "editor.rulers": [80],
+    "editor.rulers": [100],
     "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 100,
     "editor.minimap.enabled": false,
     "editor.cursorBlinking": "solid",
-    "terminal.integrated.fontSize": 11,
     "workbench.startupEditor": "newUntitledFile",
     // vim mode keybindings
-    "vim.otherModesKeyBindingsNonRecursive": [
+    "vim.normalModeKeyBindingsNonRecursive": [
         {
             "before": ["<C-e>"],
-            "after": ["5", "<C-e>"]
+            "after": ["5", "<C-e>"],
         },
         {
             "before": ["<C-y>"],
-            "after": ["5", "<C-y>"]
+            "after": ["5", "<C-y>"],
+        },
+        {
+            "before": ["<C-h>"],
+            "after": ["<C-w>", "h"],
+        },
+        {
+            "before": ["<C-j>"],
+            "after": ["<C-w>", "j"],
+        },
+        {
+            "before": ["<C-k>"],
+            "after": ["<C-w>", "k"],
+        },
+        {
+            "before": ["<C-l>"],
+            "after": ["<C-w>", "l"],
         },
         {
             "before": ["<Leader>", "q", "\""],
-            "after": ["c", "i", "w", "\"", "\"", "<Esc>", "P"]
+            "after": ["c", "i", "w", "\"", "\"", "<Esc>", "P"],
         },
         {
             "before": ["<Leader>", "q", "'"],
-            "after": ["c", "i", "w", "'", "'", "<Esc>", "P"]
+            "after": ["c", "i", "w", "'", "'", "<Esc>", "P"],
         },
         {
             "before": ["<Leader>", "q", "("],
-            "after": ["c", "i", "w", "(", ")", "<Esc>", "P"]
+            "after": ["c", "i", "w", "(", ")", "<Esc>", "P"],
         },
         {
             "before": ["<Leader>", "q", ")"],
-            "after": ["c", "i", "w", "(", ")", "<Esc>", "P"]
-        }
+            "after": ["c", "i", "w", "(", ")", "<Esc>", "P"],
+        },
     ],
-    // per language settings
-    "[scala]": {
-        "editor.rulers": [100],
-        "editor.wordWrapColumn": 100
-    },
-    "[java]": {
-        "editor.rulers": [100],
-        "editor.wordWrapColumn": 100
-    },
-
-    "latex-workshop.latex.outputDir": "./out/",
+    "latex-workshop.latex.outDir": "./out/",
     "latex-workshop.latex.recipes": [
         {
             "name": "latexmk",
@@ -97,8 +101,11 @@
     // Scala Language Server
     "scalaLanguageServer.logLevel" : "ERROR",
     "scalaLanguageServer.heapSize": "4G",
-    "workbench.iconTheme": "eq-material-theme-icons",
 
-    // CSV preview plugin
-    "csv-preview.theme": "cleanlight"
+    "gitlens.defaultDateFormat": "Do MMMM YYYY HH:mm",
+    "gitlens.defaultDateShortFormat": "D MMM YYYY",
+    "latex-workshop.view.pdf.viewer": "tab",
+    "window.zoomLevel": 0,
+    "workbench.colorTheme": "Solarized Light",
+    "workbench.iconTheme": "eq-material-theme-icons-light"
 }
