@@ -8,9 +8,10 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-" Atom colours
-Plugin 'rakr/vim-one'
-Plugin 'altercation/vim-colors-solarized'
+" Colour schemes
+Plugin 'blueshirts/darcula'
+Plugin 'dracula/vim'
+Plugin 'cohlin/vim-colorschemes'
 
 " airline statusline
 Plugin 'vim-airline/vim-airline'
