@@ -9,9 +9,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " Colour schemes
-Plugin 'blueshirts/darcula'
-Plugin 'dracula/vim'
-Plugin 'cohlin/vim-colorschemes'
+Plugin 'altercation/vim-colors-solarized'
 
 " airline statusline
 Plugin 'vim-airline/vim-airline'
@@ -32,9 +30,6 @@ Plugin 'vim-syntastic/syntastic'
 
 " a solid language pack
 Plugin 'sheerun/vim-polyglot'
-
-" ensime for Scala
-Plugin 'ensime/ensime-vim'
 
 " code completion
 Plugin 'Valloric/YouCompleteMe'
