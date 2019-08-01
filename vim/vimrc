@@ -9,7 +9,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " Colour schemes
-Plugin 'dracula/vim'
+Plugin 'lifepillar/vim-solarized8'
 
 " airline statusline
 Plugin 'vim-airline/vim-airline'

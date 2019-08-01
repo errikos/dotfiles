@@ -10,6 +10,10 @@ set surround
 " toggle relative line numbers
 nnoremap `` :set relativenumber!<Cr>
 
+" scroll the viewport faster
+nnoremap <C-e> 5<C-e>
+nnoremap <C-y> 5<C-y>
+
 " window movement
 nnoremap <C-H> <C-W>h
 nnoremap <C-J> <C-W>j
