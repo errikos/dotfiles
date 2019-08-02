@@ -85,3 +85,6 @@ nnoremap <leader>w{ :action :cursive.actions.paredit/wrap-curly<cr>
 nnoremap <leader>w" :action :cursive.actions.paredit/wrap-quotes<cr>
 nnoremap <leader>< :action :cursive.actions.paredit/barf-forwards<cr>
 nnoremap <leader>> :action :cursive.actions.paredit/slurp-forwards<cr>
+
+" IDEA clipboard
+set clipboard+=ideaput
