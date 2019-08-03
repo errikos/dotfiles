@@ -6,5 +6,6 @@ copy:
 	install -m 644 tmux.conf ~/.tmux.conf
 	install -m 644 tmux-macos.conf ~/.tmux-macos.conf
 	install -m 644 solarized-light-colours.tmux ~/.tmux/colours/solarized-light-colours.tmux
+	install -m 644 dracula-colours.tmux ~/.tmux/colours/dracula-colours.tmux
 
 install: tpm copy
