@@ -9,6 +9,7 @@
     "editor.minimap.enabled": false,
     "editor.cursorBlinking": "solid",
     "workbench.startupEditor": "newUntitledFile",
+
     // vim mode keybindings
     "vim.normalModeKeyBindingsNonRecursive": [
         {
@@ -52,6 +53,9 @@
             "after": ["c", "i", "w", "(", ")", "<Esc>", "P"],
         },
     ],
+
+    // LaTeX Workshop
+    "latex-workshop.view.pdf.viewer": "tab",
     "latex-workshop.latex.outDir": "./out/",
     "latex-workshop.latex.recipes": [
         {
@@ -98,14 +102,12 @@
 
     // Java
     "java.errors.incompleteClasspath.severity": "ignore",
-    // Scala Language Server
-    "scalaLanguageServer.logLevel" : "ERROR",
-    "scalaLanguageServer.heapSize": "4G",
 
     "gitlens.defaultDateFormat": "Do MMMM YYYY HH:mm",
     "gitlens.defaultDateShortFormat": "D MMM YYYY",
-    "latex-workshop.view.pdf.viewer": "tab",
     "window.zoomLevel": 0,
-    "workbench.colorTheme": "Solarized Light",
-    "workbench.iconTheme": "eq-material-theme-icons-light"
+
+    // Theming
+    "workbench.colorTheme": "Dracula",
+    "workbench.iconTheme": "material-icon-theme",
 }
