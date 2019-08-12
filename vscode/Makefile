@@ -1,6 +1,7 @@
 OS_NAME := $(shell uname -s | tr A-Z a-z)
 
 extensions:
+	code --install-extension akamud.vscode-theme-onedark
 	code --install-extension dracula-theme.theme-dracula
 	code --install-extension eamodio.gitlens
 	code --install-extension James-Yu.latex-workshop

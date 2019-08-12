@@ -108,6 +108,6 @@
     "window.zoomLevel": 0,
 
     // Theming
-    "workbench.colorTheme": "Dracula",
+    "workbench.colorTheme": "Atom One Dark",
     "workbench.iconTheme": "material-icon-theme",
 }
