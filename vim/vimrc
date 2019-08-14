@@ -10,6 +10,8 @@ Plugin 'VundleVim/Vundle.vim'
 
 " Colour schemes
 Plugin 'lifepillar/vim-solarized8'
+Plugin 'dracula/vim'
+Plugin 'rakr/vim-one'
 
 " airline statusline
 Plugin 'vim-airline/vim-airline'
