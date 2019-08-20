@@ -23,6 +23,6 @@ install: extensions
 ifeq ($(OS_NAME),darwin) # macOS
 	install -m 644 settings.json "/Users/ergys/Library/Application Support/Code/User/settings.json"
 else # linux
-	# TODO
+	install -m 644 settings.json "$(HOME)/.config/Code/User/settings.json"
 endif
 
