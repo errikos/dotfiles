@@ -8,5 +8,7 @@ copy:
 	install -m 644 tmux-mouse-copy-macos.tmux ~/.tmux-mouse-copy-macos.tmux
 	install -m 644 colours/solarized-light-colours.tmux ~/.tmux/colours/solarized-light-colours.tmux
 	install -m 644 colours/dracula-colours.tmux ~/.tmux/colours/dracula-colours.tmux
+	install -m 644 colours/tomorrow-colours.tmux ~/.tmux/colours/tomorrow-colours.tmux
+	install -m 644 colours/material-colours.tmux ~/.tmux/colours/material-colours.tmux
 
 install: tpm copy
