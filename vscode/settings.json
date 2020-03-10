@@ -1,14 +1,10 @@
 {
     "telemetry.enableTelemetry": false,
     "telemetry.enableCrashReporter": false,
-    "editor.fontFamily": "Source Code Pro, Menlo, Fira Code",
+    "workbench.colorTheme": "Ayu Light",
     "editor.lineNumbers": "relative",
-    "editor.rulers": [100],
-    "editor.wordWrap": "wordWrapColumn",
-    "editor.wordWrapColumn": 100,
-    "editor.minimap.enabled": false,
     "editor.cursorBlinking": "solid",
-    "workbench.startupEditor": "newUntitledFile",
+    "editor.minimap.enabled": false,
 
     // vim mode keybindings
     "vim.normalModeKeyBindingsNonRecursive": [
@@ -100,14 +96,11 @@
         }
     ],
 
-    // Java
-    "java.errors.incompleteClasspath.severity": "ignore",
-
     "gitlens.defaultDateFormat": "Do MMMM YYYY HH:mm",
     "gitlens.defaultDateShortFormat": "D MMM YYYY",
-    "window.zoomLevel": 0,
-
-    // Theming
-    "workbench.colorTheme": "Atom One Dark",
+    "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
     "workbench.iconTheme": "material-icon-theme",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "editor.fontFamily": "'MesloLGS NF'",
 }
