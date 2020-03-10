@@ -7,11 +7,15 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Colour schemes
 Plugin 'lifepillar/vim-solarized8'
 Plugin 'dracula/vim'
 Plugin 'rakr/vim-one'
+Plugin 'stillwwater/vim-nebula'
+Plugin 'arzg/vim-colors-xcode'
+Plugin 'ayu-theme/ayu-vim'
 
 " airline statusline
 Plugin 'vim-airline/vim-airline'
@@ -34,7 +38,7 @@ Plugin 'vim-syntastic/syntastic'
 Plugin 'sheerun/vim-polyglot'
 
 " code completion
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe'
 
 " markdown preview
 Plugin 'JamshedVesuna/vim-markdown-preview'
@@ -53,3 +57,4 @@ so ~/.vim_config/ui.vim
 so ~/.vim_config/bindings.vim
 so ~/.vim_config/editor.vim
 so ~/.vim_config/plugins.vim
+so ~/.vim_config/metals.vim

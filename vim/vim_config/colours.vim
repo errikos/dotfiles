@@ -8,10 +8,11 @@ let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 set cursorline
 
 """" Configure colour scheme
-set background=dark
-colorscheme dracula
+set background=light
+let ayucolor="light"
+colorscheme ayu
 
 """ Configure statusline (airline)
 set laststatus=2
 let g:airline_powerline_fonts=1
-let g:airline_theme='dracula'
+let g:airline_theme='ayu'
