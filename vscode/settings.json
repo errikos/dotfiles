@@ -2,6 +2,7 @@
     "telemetry.enableTelemetry": false,
     "telemetry.enableCrashReporter": false,
     "workbench.colorTheme": "Ayu Light",
+    "workbench.iconTheme": "ayu",
     "editor.lineNumbers": "relative",
     "editor.cursorBlinking": "solid",
     "editor.minimap.enabled": false,
@@ -99,8 +100,8 @@
     "gitlens.defaultDateFormat": "Do MMMM YYYY HH:mm",
     "gitlens.defaultDateShortFormat": "D MMM YYYY",
     "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
-    "workbench.iconTheme": "material-icon-theme",
     "editor.suggestSelection": "first",
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "editor.fontFamily": "'MesloLGS NF'",
+    "workbench.startupEditor": "newUntitledFile",
+    "explorer.autoReveal": false,
 }
