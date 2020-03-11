@@ -1,7 +1,9 @@
 CONFIG_DIR=~/.vim_config
 
-vundle:
-	git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+metals:
+	brew install node yarn
+
+deps: metals
 
 copy:
 	install -d vim_config $(CONFIG_DIR)
@@ -10,5 +12,5 @@ copy:
 	install -m 644 gvimrc ~/.gvimrc
 	install -m 644 ideavimrc ~/.ideavimrc
 
-install: vundle copy
+install: deps copy
 	vim +PluginInstall +qall

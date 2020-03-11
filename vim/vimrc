@@ -1,56 +1,53 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
+" Make sure vim-plug is installed
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'neoclide/coc.nvim', {'branch': 'release'}
+" vim-plug
+call plug#begin('~/.vim/plugged')
 
 " Colour schemes
-Plugin 'lifepillar/vim-solarized8'
-Plugin 'dracula/vim'
-Plugin 'rakr/vim-one'
-Plugin 'stillwwater/vim-nebula'
-Plugin 'arzg/vim-colors-xcode'
-Plugin 'ayu-theme/ayu-vim'
+Plug 'ayu-theme/ayu-vim'
 
 " airline statusline
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+" Plug 'edkolev/tmuxline.vim'
 
 " NERDTree
-Plugin 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree'
 
 " git integration
-Plugin 'airblade/vim-gitgutter'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plug 'airblade/vim-gitgutter'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " comment/uncomment stuff
-Plugin 'tpope/vim-commentary'
+Plug 'tpope/vim-commentary'
 
 " syntax checking
-Plugin 'vim-syntastic/syntastic'
-
-" a solid language pack
-Plugin 'sheerun/vim-polyglot'
-
-" code completion
-" Plugin 'Valloric/YouCompleteMe'
+Plug 'vim-syntastic/syntastic'
 
 " markdown preview
-Plugin 'JamshedVesuna/vim-markdown-preview'
+Plug 'JamshedVesuna/vim-markdown-preview'
 
 " Snippets
-Plugin 'SirVer/ultisnips'    " track the engine
-Plugin 'honza/vim-snippets'  " get the snippets
+Plug 'SirVer/ultisnips'    " track the engine
+Plug 'honza/vim-snippets'  " get the snippets
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
+" Scala
+Plug 'derekwyatt/vim-scala'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+" fzf
+Plug 'junegunn/fzf', { 'do': './install --bin' }
+Plug 'junegunn/fzf.vim'
+
+" Initialize plugin system
+call plug#end()
+
+" Personal configuration
 set runtimepath+=~/.vim_config
 so ~/.vim_config/colours.vim
 so ~/.vim_config/ui.vim
