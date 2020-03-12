@@ -1,16 +1,15 @@
 OS_NAME := $(shell uname -s | tr A-Z a-z)
 
 extensions:
-	code --install-extension akamud.vscode-theme-onedark
-	code --install-extension dracula-theme.theme-dracula
 	code --install-extension eamodio.gitlens
+	code --install-extension Gruntfuggly.todo-tree
 	code --install-extension James-Yu.latex-workshop
-	code --install-extension MS-CEINTL.vscode-language-pack-fr
 	code --install-extension ms-python.python
 	code --install-extension ms-vscode.cpptools
-	code --install-extension msjsdiag.debugger-for-chrome
-	code --install-extension PKief.material-icon-theme
 	code --install-extension redhat.java
+	code --install-extension scala-lang.scala
+	code --install-extension scalameta.metals
+	code --install-extension teabyii.ayu
 	code --install-extension VisualStudioExptTeam.vscodeintellicode
 	code --install-extension vscjava.vscode-java-debug
 	code --install-extension vscjava.vscode-java-dependency
