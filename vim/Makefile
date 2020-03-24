@@ -13,4 +13,4 @@ copy:
 	install -m 644 ideavimrc ~/.ideavimrc
 
 install: deps copy
-	vim +PluginInstall +qall
+	vim +PlugInstall +qall
