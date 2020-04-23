@@ -1,7 +1,7 @@
 {
     "telemetry.enableTelemetry": false,
     "telemetry.enableCrashReporter": false,
-    "workbench.colorTheme": "One Dark Pro",
+    "workbench.colorTheme": "Ayu Mirage",
     "workbench.iconTheme": "ayu",
     "editor.lineNumbers": "relative",
     "editor.cursorBlinking": "solid",
@@ -99,11 +99,20 @@
 
     "gitlens.defaultDateFormat": "Do MMMM YYYY HH:mm",
     "gitlens.defaultDateShortFormat": "D MMM YYYY",
-    "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
     "editor.suggestSelection": "first",
     "editor.fontFamily": "'MesloLGS NF'",
     "workbench.startupEditor": "newUntitledFile",
     "explorer.autoReveal": false,
     "todo-tree.tree.showScanModeButton": false,
     "todo-tree.highlights.enabled": true,
+    "workbench.colorCustomizations": {
+        "[Ayu Mirage]": {
+            "editor.wordHighlightBorder": "#d9d7cd",
+            "editor.wordHighlightStrongBorder": "#ffcb65"
+        },
+        "[Solarized Light]": {
+            "editorCursor.background": "#eee8d5",
+            "editorCursor.foreground": "#657b83"
+        }
+    },
 }
