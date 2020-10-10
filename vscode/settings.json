@@ -1,7 +1,8 @@
 {
     "telemetry.enableTelemetry": false,
     "telemetry.enableCrashReporter": false,
-    "workbench.colorTheme": "Ayu Mirage",
+    "editor.fontFamily": "'Source Code Pro', Menlo, Monaco, 'Courier New', monospace",
+    "workbench.colorTheme": "Ayu Light",
     "workbench.iconTheme": "ayu",
     "editor.lineNumbers": "relative",
     "editor.cursorBlinking": "solid",
@@ -53,66 +54,13 @@
 
     // LaTeX Workshop
     "latex-workshop.view.pdf.viewer": "tab",
-    "latex-workshop.latex.outDir": "./out/",
-    "latex-workshop.latex.recipes": [
-        {
-            "name": "latexmk",
-            "tools": [
-                "latexmk"
-            ]
-        },
-    ],
-    "latex-workshop.latex.tools": [
-        {
-            "name": "latexmk",
-            "command": "latexmk",
-            "args": [
-                "-synctex=1",
-                "-interaction=nonstopmode",
-                "-file-line-error",
-                "-pdf",
-                "-aux-directory=out",
-                "-output-directory=out",
-                "%DOC%"
-            ]
-        },
-        {
-            "name": "pdflatex",
-            "command": "pdflatex",
-            "args": [
-                "-synctex=1",
-                "-interaction=nonstopmode",
-                "-file-line-error",
-                "-aux-directory=out",
-                "-output-directory=out",
-                "%DOC%"
-            ]
-        },
-        {
-            "name": "bibtex",
-            "command": "bibtex",
-            "args": [
-                "%DOCFILE%"
-            ]
-        }
-    ],
+    "latex-workshop.latex.outDir": "out",
 
     "gitlens.defaultDateFormat": "Do MMMM YYYY HH:mm",
     "gitlens.defaultDateShortFormat": "D MMM YYYY",
     "editor.suggestSelection": "first",
-    "editor.fontFamily": "'MesloLGS NF'",
     "workbench.startupEditor": "newUntitledFile",
     "explorer.autoReveal": false,
     "todo-tree.tree.showScanModeButton": false,
     "todo-tree.highlights.enabled": true,
-    "workbench.colorCustomizations": {
-        "[Ayu Mirage]": {
-            "editor.wordHighlightBorder": "#d9d7cd",
-            "editor.wordHighlightStrongBorder": "#ffcb65"
-        },
-        "[Solarized Light]": {
-            "editorCursor.background": "#eee8d5",
-            "editorCursor.foreground": "#657b83"
-        }
-    },
 }
