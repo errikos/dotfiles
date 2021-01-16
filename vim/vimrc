@@ -44,7 +44,6 @@ Plug 'honza/vim-snippets'  " get the snippets
 
 " Scala
 Plug 'derekwyatt/vim-scala'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " fzf
 Plug 'junegunn/fzf', { 'do': './install --bin' }
@@ -60,4 +59,3 @@ so ~/.vim_config/ui.vim
 so ~/.vim_config/bindings.vim
 so ~/.vim_config/editor.vim
 so ~/.vim_config/plugins.vim
-so ~/.vim_config/metals.vim
