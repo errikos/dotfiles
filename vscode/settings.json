@@ -1,9 +1,9 @@
 {
     "telemetry.enableTelemetry": false,
     "telemetry.enableCrashReporter": false,
-    "editor.fontFamily": "'Source Code Pro', Menlo, Monaco, 'Courier New', monospace",
-    "workbench.colorTheme": "Ayu Light",
-    "workbench.iconTheme": "ayu",
+    "editor.fontFamily": "'SauceCodePro Nerd Font Mono', Menlo, Monaco, 'Courier New', monospace",
+    "workbench.colorTheme": "Darcula",
+    "workbench.iconTheme": "file-icons",
     "editor.lineNumbers": "relative",
     "editor.cursorBlinking": "solid",
     "editor.minimap.enabled": false,

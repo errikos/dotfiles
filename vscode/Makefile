@@ -2,11 +2,13 @@ OS_NAME := $(shell uname -s | tr A-Z a-z)
 
 extensions:
 	code --install-extension eamodio.gitlens
+	code --install-extension file-icons.file-icons
 	code --install-extension Gruntfuggly.todo-tree
 	code --install-extension James-Yu.latex-workshop
 	code --install-extension ms-python.python
 	code --install-extension ms-vscode.cpptools
 	code --install-extension redhat.java
+	code --install-extension rokoroku.vscode-theme-darcula
 	code --install-extension scala-lang.scala
 	code --install-extension scalameta.metals
 	code --install-extension teabyii.ayu
