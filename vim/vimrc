@@ -37,6 +37,9 @@ Plug 'vim-syntastic/syntastic'
 " markdown preview
 Plug 'JamshedVesuna/vim-markdown-preview'
 
+" completion engine
+Plug 'ycm-core/YouCompleteMe'
+
 " Snippets
 Plug 'SirVer/ultisnips'    " track the engine
 Plug 'honza/vim-snippets'  " get the snippets
