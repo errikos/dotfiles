@@ -1,7 +1,7 @@
 {
     "telemetry.enableTelemetry": false,
     "telemetry.enableCrashReporter": false,
-    "editor.fontFamily": "'SauceCodePro Nerd Font Mono', Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontFamily": "'MesloLGS NF', Menlo, Monaco, 'Courier New', monospace",
     "workbench.colorTheme": "Darcula",
     "workbench.iconTheme": "file-icons",
     "editor.lineNumbers": "relative",
