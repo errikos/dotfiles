@@ -7,6 +7,7 @@ extensions:
 	code --install-extension James-Yu.latex-workshop
 	code --install-extension ms-python.python
 	code --install-extension ms-vscode.cpptools
+	code --install-extension ms-vscode-remote.remote-ssh
 	code --install-extension redhat.java
 	code --install-extension rokoroku.vscode-theme-darcula
 	code --install-extension scala-lang.scala
