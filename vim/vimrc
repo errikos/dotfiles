@@ -30,6 +30,8 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " comment/uncomment stuff
 Plug 'tpope/vim-commentary'
+" surround
+Plug 'tpope/vim-surround'
 
 " syntax checking
 Plug 'vim-syntastic/syntastic'
