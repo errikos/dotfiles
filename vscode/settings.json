@@ -1,8 +1,9 @@
 {
-    "telemetry.enableTelemetry": false,
-    "telemetry.enableCrashReporter": false,
-    "editor.fontFamily": "'MesloLGS NF', Menlo, Monaco, 'Courier New', monospace",
-    "workbench.colorTheme": "Darcula",
+    "telemetry.telemetryLevel": "off",
+    "redhat.telemetry.enabled": false,
+    "editor.fontFamily": "'FiraCode-Retina', 'MesloLGS NF', Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontLigatures": true,
+    "workbench.colorTheme": "Default Light+",
     "workbench.iconTheme": "file-icons",
     "editor.lineNumbers": "relative",
     "editor.cursorBlinking": "solid",
@@ -54,13 +55,18 @@
 
     // LaTeX Workshop
     "latex-workshop.view.pdf.viewer": "tab",
-    "latex-workshop.latex.outDir": "out",
+    "latex-workshop.latex.outDir": "latex.out",
 
     "gitlens.defaultDateFormat": "Do MMMM YYYY HH:mm",
     "gitlens.defaultDateShortFormat": "D MMM YYYY",
     "editor.suggestSelection": "first",
     "workbench.startupEditor": "newUntitledFile",
     "explorer.autoReveal": false,
-    "todo-tree.tree.showScanModeButton": false,
     "todo-tree.highlights.enabled": true,
+    "editor.accessibilitySupport": "off",
+    "files.watcherExclude": {
+        "**/.bloop": true,
+        "**/.metals": true,
+        "**/.ammonite": true
+    },
 }
