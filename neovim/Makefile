@@ -4,6 +4,7 @@ astro:
 	nvim +PackerSync
 
 copy:
+	mkdir -p ~/.config/nvim/lua/user
 	install -m 644 ./init.lua ~/.config/nvim/lua/user/init.lua
 
 install: astro copy
