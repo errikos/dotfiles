@@ -1,13 +1,17 @@
 #!/usr/bin/env bash
+# .bash_profile
 
-# source all files in ~/.bash_config
+# Get the aliases and functions
+if [ -f ~/.bashrc ]; then
+	. ~/.bashrc
+fi
+
+# User specific environment and startup programs
+
+# Source all files in ~/.bash_config
 BASH_CONFIG_PATH="$HOME/.bash_config"
 if [ -d "$BASH_CONFIG_PATH" ]; then
     for file in "$BASH_CONFIG_PATH"/*.bash; do
         source "$file"
     done
-fi
-
-if [ -f "$HOME/.bashrc" ]; then
-    source "$HOME/.bashrc"
 fi
