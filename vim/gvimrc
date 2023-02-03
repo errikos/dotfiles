@@ -1,4 +1,4 @@
-set guifont=Source\ Code\ Pro:h12  " font for GUI
+set guifont=MesloLGS\ NF:h12  " font for GUI
 set lines=60 columns=140  " window size
 set guioptions-=L  " disable left scrollbar
 set guioptions-=r  " disable right scrollbar

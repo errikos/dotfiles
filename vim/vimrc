@@ -9,12 +9,7 @@ endif
 call plug#begin('~/.vim/plugged')
 
 " Colour schemes
-Plug 'dracula/vim'
-Plug 'rakr/vim-one'
-Plug 'ayu-theme/ayu-vim'
 Plug 'lifepillar/vim-solarized8'
-Plug 'arcticicestudio/nord-vim'
-Plug 'doums/darcula'
 
 " airline statusline
 Plug 'vim-airline/vim-airline'
