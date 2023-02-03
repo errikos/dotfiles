@@ -1,10 +1,9 @@
 {
     "telemetry.telemetryLevel": "off",
-    "redhat.telemetry.enabled": false,
-    "editor.fontFamily": "'FiraCode-Retina', 'MesloLGS NF', Menlo, Monaco, 'Courier New', monospace",
-    "editor.fontLigatures": true,
-    "workbench.colorTheme": "Default Light+",
-    "workbench.iconTheme": "file-icons",
+
+    "workbench.colorTheme": "Solarized Light+",
+
+    "editor.fontFamily": "'MesloLGS NF', Menlo, Monaco, 'Courier New', monospace",
     "editor.lineNumbers": "relative",
     "editor.cursorBlinking": "solid",
     "editor.minimap.enabled": false,
@@ -57,13 +56,10 @@
     "latex-workshop.view.pdf.viewer": "tab",
     "latex-workshop.latex.outDir": "latex.out",
 
+    // GitLens
     "gitlens.defaultDateFormat": "Do MMMM YYYY HH:mm",
     "gitlens.defaultDateShortFormat": "D MMM YYYY",
-    "editor.suggestSelection": "first",
-    "workbench.startupEditor": "newUntitledFile",
-    "explorer.autoReveal": false,
-    "todo-tree.highlights.enabled": true,
-    "editor.accessibilitySupport": "off",
+
     "files.watcherExclude": {
         "**/.bloop": true,
         "**/.metals": true,
