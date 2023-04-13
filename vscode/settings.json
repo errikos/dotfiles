@@ -1,7 +1,10 @@
 {
     "telemetry.telemetryLevel": "off",
+    "[python]": {
+        "editor.formatOnType": true
+    },
 
-    "workbench.colorTheme": "Solarized Light+",
+    "window.titleBarStyle": "custom",
 
     "editor.fontFamily": "'MesloLGS NF', Menlo, Monaco, 'Courier New', monospace",
     "editor.lineNumbers": "relative",
