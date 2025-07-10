@@ -1,8 +1,4 @@
-astro:
-	mkdir -p ~/.config
-	git clone https://github.com/kabinspace/AstroVim ~/.config/nvim
+install:
+	git clone --depth=1 https://github.com/errikos/astronvim-config.git ~/.config/nvim
+	rm -rf ~/.config/nvim/.git
 
-user:
-	git clone git@github.com:errikos/astronvim-config.git ~/.config/nvim/lua/user
-
-install: astro user
