@@ -3,6 +3,9 @@ GITSTATUS_INSTALL_PATH := $(HOME)/.local/gitstatus
 BASHIT_INSTALL_PATH    := $(HOME)/.bash-it
 TARGET_RC_FILE         := $(HOME)/.bashrc # <-- Change this to .bash_profile if you use that
 
+# --- Theme Variables ---
+CUSTOM_THEME_FILE      := easy-gitstatus.theme.bash
+
 # --- Targets ---
 
 # Phony targets don't represent files, just names for recipes.
@@ -27,9 +30,14 @@ config: gitstatus bashit
 	@perl -i.bak -pe 'print "source '$(GITSTATUS_INSTALL_PATH)'/gitstatus.prompt.sh\n" if /^# Load Bash It/' $(TARGET_RC_FILE)
 
 install-theme: bashit
-	@echo "Installing custom theme to $(BASHIT_INSTALL_PATH)/themes/easy-gitstatus..."
-	@mkdir -p $(BASHIT_INSTALL_PATH)/themes/easy-gitstatus
-	@cp $(CUSTOM_THEME_FILE) $(BASHIT_INSTALL_PATH)/themes/easy-gitstatus/easy-gitstatus.theme.bash
+	@# Use shell commands to extract names. $$ is for shell, $(...) is for make.
+	@THEME_BASENAME=$$(basename $(CUSTOM_THEME_FILE)); \
+	THEME_NAME=$$(basename $(CUSTOM_THEME_FILE) .theme.bash); \
+	THEME_INSTALL_DIR=$(BASHIT_INSTALL_PATH)/themes/$$THEME_NAME; \
+	\
+	echo "Installing custom theme to $$THEME_INSTALL_DIR..."; \
+	mkdir -p $$THEME_INSTALL_DIR; \
+	cp $(CUSTOM_THEME_FILE) $$THEME_INSTALL_DIR/$$THEME_BASENAME
 
 config-theme: bashit
 	@echo "Setting custom theme in $(TARGET_RC_FILE)..."
