@@ -9,12 +9,11 @@ endif
 call plug#begin('~/.vim/plugged')
 
 " Colour schemes
-Plug 'lifepillar/vim-solarized8'
+Plug 'catppuccin/vim', { 'as': 'catppuccin' }
 
 " airline statusline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-" Plug 'edkolev/tmuxline.vim'
 
 " NERDTree
 Plug 'scrooloose/nerdtree'
@@ -30,19 +29,6 @@ Plug 'tpope/vim-surround'
 
 " syntax checking
 Plug 'vim-syntastic/syntastic'
-
-" markdown preview
-Plug 'JamshedVesuna/vim-markdown-preview'
-
-" completion engine
-Plug 'ycm-core/YouCompleteMe'
-
-" Snippets
-Plug 'SirVer/ultisnips'    " track the engine
-Plug 'honza/vim-snippets'  " get the snippets
-
-" Scala
-Plug 'derekwyatt/vim-scala'
 
 " fzf
 Plug 'junegunn/fzf', { 'do': './install --bin' }
