@@ -9,7 +9,7 @@ endif
 call plug#begin('~/.vim/plugged')
 
 " Colour schemes
-Plug 'catppuccin/vim', { 'as': 'catppuccin' }
+Plug 'morhetz/gruvbox'
 
 " airline statusline
 Plug 'vim-airline/vim-airline'

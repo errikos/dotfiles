@@ -9,9 +9,8 @@ set cursorline
 
 """" Configure colour scheme
 set background=dark
-colorscheme catppuccin_frappe
+colorscheme gruvbox
 
 """ Configure statusline (airline)
 set laststatus=2
 let g:airline_powerline_fonts=1
-let g:airline_theme = 'catppuccin_frappe'
